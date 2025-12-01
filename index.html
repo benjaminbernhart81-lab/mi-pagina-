@@ -8,7 +8,7 @@
   <style>
     .caja{
         background-color: white;
-        width: 80%;
+        width: 90%;
         max-width: 800px;
         margin: auto;
         padding: 20px;
@@ -76,23 +76,25 @@
       cursor: pointer;
       font-size: 14px;
     }
-
     button:hover{
       background-color: #355bb5;
     }
 
     .fila {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background-color: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      max-width: 900px;
-      margin: auto;
-      margin-bottom: 20px;
+     display: flex;
+     flex-wrap: wrap;      /* Permite que salte abajo */
+     align-items: center;
+     justify-content: center;
+     gap: 20px;
+     background-color: white;
+     padding: 20px;
+     border-radius: 15px;
+     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+     max-width: 900px;
+     margin: auto;
+     margin-bottom: 20px;
     }
+
 /* Caja ocultable con animación */
     .detalle {
       max-height: 0;
@@ -136,28 +138,47 @@
     margin-top: 10px;
     }
 
-    .foto2 {
-      width: 40%;
-      border-radius: 12px;
+    .foto {
+      max-width: 100%;
+      font-size: 20px;
+      color: #333;
     }
 
     .texto-lado {
-      width: 60%;
+      width: 100%;
       font-size: 20px;
       color: #333;
     }
 
     @media (max-width: 600px) {
-      .fila{
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .foto2,
-      .texto-lado {
-        width: 100%;
-      }
+    .fila {
+    flex-direction: column;
+    text-align: center;
     }
+
+    .texto-lado p {
+     font-size: 18px;
+    }
+
+     ul li {
+    font-size: 20px;
+    }
+    }
+
+
+    .foto2 {
+    max-width: 100%;
+    font-size: 20px;
+    color: #333;
+    }
+
+    .texto-lado {
+      width: 100%;
+      font-size: 20px;
+      color: #333;
+    }
+
+
 
     p{
       font-size: 20px;
