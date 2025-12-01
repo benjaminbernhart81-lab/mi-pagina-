@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi primera página</title>
+  <style>
+    .caja{
+        background-color: white;
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow:0 0 15px rgba(0,0,0,0.3);
+        box-sizing: border-box;
+    }
+
+    .foto{
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    body{
+      background:linear-gradient(to bottom,#6a85b6,#bac8e0);
+      font-family: Times New Roman, Serif;
+      margin: 0;
+    }
+
+    h1 , h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    h1{
+      color:blue;
+      text-align: center; 
+      font-size: 35px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    h2{
+      color:pink;
+      text-align: center;
+      font-size: 30px;
+    }
+    
+    ul{
+      color: skyblue;
+      list-style-type:square;
+      padding-left: 30px;
+      margin-top: 10px;
+    }
+
+
+    ul li {
+    font-size: 18px;       /* Letra más grande */
+    color: #1c4a7c;        /* Azul suave, más elegante */
+    margin-bottom: 15px;   /* Espacio entre cada razón */
+    font-weight: 500;      /* Un poquito más grueso */
+    display: flex;         /* Alinea texto + botón */
+    align-items: center;
+    gap: 10px;             /* Espacio entre texto y botón */
+    }
+
+
+
+    button{
+      background-color:#4a76d4;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover{
+      background-color: #355bb5;
+    }
+
+    .fila {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      max-width: 900px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+
+    .foto2 {
+      width: 40%;
+      border-radius: 12px;
+    }
+
+    .texto-lado {
+      width: 60%;
+      font-size: 20px;
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      .fila{
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .foto2,
+      .texto-lado {
+        width: 100%;
+      }
+    }
+
+    p{
+      font-size: 20px;
+      color:blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="caja">
+
+    <img src="https://i.postimg.cc/g2wtsxpZ/japon4k.jpg" class="foto">
+
+    <div class="fila">
+    <img src="https://i.postimg.cc/g2wtsxpZ/japon4k.jpg" class="foto">
+
+
+      <div class="texto-lado">
+        <h2>¿Por qué Japón?</h2>
+        <p>Japón me atrae por su cultura, idioma, becas y estilo de vida.  
+        Quiero aprender más y algún día viajar allí.</p>
+      </div>
+    </div>
+
+    <!-- Tus títulos y lista dentro de la caja -->
+    <h1>mis razones</h1>
+
+    <ul>
+      <li>la cultura <button>ver más</button></li>
+      <li>la gente <button>ver más</button></li>
+      <li>el idioma <button>ver más</button></li>
+      <li>la beca <button>ver más</button></li>
+    </ul>
+
+    <p>Esta es mi primera página web hecha desde cero.</p>
+</div> 
+</body>
+</html> 
