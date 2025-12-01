@@ -93,6 +93,48 @@
       margin: auto;
       margin-bottom: 20px;
     }
+/* Caja ocultable con animación */
+    .detalle {
+      max-height: 0;
+    overflow: hidden;
+     transition: max-height 0.5s ease;
+    }
+
+/* Cuando está activo */
+    .detalle.abierto {
+    max-height: 500px;  /* Ajusta si necesitas más */
+    }
+
+/* Botón moderno */
+    .btn-ver {
+      background-color: #4a76d4;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .btn-ver:hover {
+    background-color: #355bb5;
+    }
+
+/* Tarjeta interna */
+    .tarjeta {
+    background: white;
+     padding: 15px;
+     margin-top: 12px;
+     border-radius: 12px;
+     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+     }
+
+    .tarjeta img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    }
 
     .foto2 {
       width: 40%;
@@ -123,6 +165,18 @@
     }
   </style>
 </head>
+<script>
+function toggleDetalle(id) {
+    const caja = document.getElementById(id);
+
+    if (caja.classList.contains("abierto")) {
+        caja.classList.remove("abierto");
+        } else {
+        caja.classList.add("abierto");
+    }
+    }
+</script>
+
 
 <body>
   <div class="caja">
@@ -144,10 +198,54 @@
     <h1>Mis razones</h1>
 
     <ul>
-      <li>La cultura <button>Ver más</button></li>
-      <li>La gente <button>Ver más</button></li>
-      <li>El idioma <button>Ver más</button></li>
-      <li>La beca <button>Ver más</button></li>
+<li>
+  La cultura
+  <button class="btn-ver" onclick="toggleDetalle('cultura')">Ver más</button>
+
+  <div id="cultura" class="detalle">
+    <div class="tarjeta">
+      <p>Japón tiene templos, historia milenaria y tradiciones hermosas.</p>
+      <img src="https://i.postimg.cc/g2wtsxpZ/japon4k.jpg">
+    </div>
+  </div>
+</li>
+
+<li>
+  La gente
+  <button class="btn-ver" onclick="toggleDetalle('gente')">Ver más</button>
+
+  <div id="gente" class="detalle">
+    <div class="tarjeta">
+      <p>La educación, respeto y amabilidad japonesas son admirables.</p>
+      <img src="https://i.postimg.cc/ydcFnrVH/japon5k.jpg">
+    </div>
+  </div>
+</li>
+
+<li>
+  El idioma
+  <button class="btn-ver" onclick="toggleDetalle('idioma')">Ver más</button>
+
+  <div id="idioma" class="detalle">
+    <div class="tarjeta">
+      <p>Aprender japonés abre puertas a cultura, becas y oportunidades.</p>
+      <img src="https://i.postimg.cc/g2wtsxpZ/japon4k.jpg">
+    </div>
+  </div>
+</li>
+
+<li>
+  La beca
+  <button class="btn-ver" onclick="toggleDetalle('beca')">Ver más</button>
+
+  <div id="beca" class="detalle">
+    <div class="tarjeta">
+      <p>Quiero aplicar a las becas de Japón y estudiar allá algún día.</p>
+      <img src="https://i.postimg.cc/ydcFnrVH/japon5k.jpg">
+    </div>
+  </div>
+</li>
+
     </ul>
 
     <p>Esta es mi primera página web hecha desde cero.</p>
